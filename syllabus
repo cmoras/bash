@@ -1,0 +1,24 @@
+What will we be covering?
+
+--bash environment [bash rc, variables]
+--exit codes and return status 
+--pipes and redirects
+--signal
+--fg and bg
+--permission/PATH
+--variables [static and dynamic]
+--io handling
+--conditional
+--flow control
+--functions/array
+--value testing
+--sub shells
+--math computations
+--advanced io [IPC]
+--advanced find
+--dependencies [sourcing,libraries]
+--date and time [timezones with cronjobs]
+--metadata
+
+
+
