@@ -1,0 +1,45 @@
+they are determined using the contentc of /etc/skel and /etc/profile per user:
+
+system instance /etc/bashrc [system wide config]
+local instace .bashrc [for one user]
+
+bash profile
+------------
+is used when you login. ie  when you login it helps confiure the shell
+
+--bash profile with have the PATH variable
+export PATH=$PATH:$HOME/bin
+
+--can set up alias
+alias lz ='ls -alZ | more'
+
+
+bash rc
+-------
+only contains section which will be only specific to only that shell:
+
+fo rinstance lets export a var 
+
+var=/usr/sec/sbin
+
+then run >> bash :  this should create a shell with e new env varialbe. how ever the existing shell will not have it 
+
+
+bash history
+------------
+captures the info about the commands that have been run in the shell. you can however setup what type of history needs to be stored.
+
+env | grep HISTCONTROL
+if there is ignore duplicates, hthen it ignores repeated commands
+
+export HITCONTROL=$HISTCONTROL:ignorespace
+
+bash logout 
+-----------
+to exit the shell 
+
+
+envvar
+------
+generally speaking it is a way for shortcutting in CAPS.
+
