@@ -1,0 +1,54 @@
+This section with deal with setting up varibles.
+Two types of declaration:
+--implicit
+--explicit
+
+Implicit
+-------
+var="hello"
+var1=12;
+
+This here is an example of implicit declaration.  Automatically identifies whether its string or int.
+
+
+explicit
+--------
+declare -i nerve=10
+
+now i have declared and initialized the varaible nerve to the value of 10.
+in oorder to test it out call out 
+
+declare -p nerve
+
+you should see something indicating that it is "int" like -i 
+if explicitly declared as int as in case earlier,  we cannot set the value of nerve as a different type like a string.
+
+use cases
+---------
+
+for instance:
+nerve=910 
+echo $nerve shold give 910 as the answer
+however
+nerve="hello this is poodipie"
+echo $nerve output : 0
+
+
+so the type needs to be changed 
+
+declare +i nerve
+now a declare -p nerve should give no indication of what type the variable belongs to 
+so once this is the case you can run
+nerve="this is poodipie"
+
+should gimme us the ansee
+
+
+other ways of doing it 
+
+declare -r nerve1="jeloo"
+
+shold make this readonly 
+
+
+
