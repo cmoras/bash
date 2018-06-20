@@ -33,3 +33,15 @@ Quotes and escape characters
 '' ----> preserver the value of whats inside it,  eg: echo out whatever is inside.
 "" ----> checks if there are any variables , and puts out the value for that.
 
+Shell expansions and globbing:
+------------------------------
+expansion involves use of {} to put in all cases for example
+
+echo abc{r}
+or echo abc{e,y}
+
+to grep for environment vars
+env | grep "HO*"
+
+or we can try 
+echo "${!HO*} ---> print out anything thing that starts with HO in terms of my envaar.
