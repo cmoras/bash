@@ -1,0 +1,8 @@
+/dev/null/
+----------
+you can send output to a blackhole , this is the right place to send it.  esentially this is generally used for testing purpose, 
+perhaps to :
+test the speed  
+timming execution
+eliminating the error message by not letting it print it in std opt.
+
