@@ -1,0 +1,19 @@
+What are Infoboxes?
+--it a pop up box that pops up with some/any information. Looks neato.
+
+for test case cehck out infobox shell script 
+
+1) first script is an exampole for just a info box
+2) is an example for message box  with a button indicating a choice for the user
+3) an entry is provided with menu 
+
+
+to check how many args are present 
+----------------------------------
+
+: ${3?"Usage: $1 arg1 $2 arg2 $3 arg3"}
+
+
+so here if there no 3 args then display the usage statement
+if not no issues  got ot the next bit
+

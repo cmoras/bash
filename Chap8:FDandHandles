@@ -1,0 +1,34 @@
+what are file descriptors?
+
+Numeric description of a file that you may want to read/write and determin how to open that file at runtime. 
+0 1 2 are system reserved fd's
+< 3 are good to go 
+
+0 - std i/p
+1 - std o/p
+2 - std err
+
+example  to read and write a file using file descriptors:
+
+#!/bin/bash
+
+echo  "raeding a file"
+read file
+
+#pick a file handle  with a number greater than 3
+#exec 5> write only 
+#exec 5< read only
+#exec 5<> both 
+
+exec 5<>$file
+
+while read -r var1; do 
+	echo "var1 value: $var1"
+done <&5
+
+echo "File was read oon `date`" >&5
+
+exec 5>&-
+
+
+	

@@ -1,0 +1,27 @@
+Starting with basics of scripting:
+
+Passing var's to the scripts
+----------------------------
+pass it using read command
+
+if ,for done
+
+case staement:
+-------------
+
+formatting
+
+case $choice in
+	1)
+		echo "you chose one";;
+	*)
+		echo "this is catch all";;
+esac
+
+
+execution operators:
+--------------------
+&& True and true for o/p
+|| true and false should give o/p as well
+
+

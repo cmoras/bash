@@ -1,0 +1,22 @@
+This will be about traps. :D With this we can look for an occurance of an event and act accordingly
+
+For instance when creating a menu to choose from.  a cntr + c can kick the script to the curb.  however with trap we can create a catch section whcih can catch the SIGINT or SIGTERM and display a clean
+message 
+
+example of a menu:
+
+clear
+
+trap 'echo "please press Q"' SIGINT SIGTERM SIGTSTP EXIT
+
+while [ "$ch" != "Q" ] && [ "$ch" != "q" ]; do 
+	echo "1) one"
+	echo "2) 2"
+	echo "Q) Quit"
+	echo ""
+	read ch
+	clear
+done 
+
+
+#kill -9 cannot be captured.

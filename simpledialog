@@ -1,0 +1,25 @@
+#!/bin/bash
+
+MENUBOX=${MENUBOX=dialog}
+#TITLE="Default"
+#MESSAGE="Something to say"
+#XCORD=10
+#YCord=20
+
+#15 is xcord
+#45 is ycord
+#4 is the no of choices
+
+function  displaydiamenu ()
+{
+	$MENUBOX --title "[ M A I N  M E N U ]" --menu "use up/down arraow keys to move and select or the no of you choice and enter" 15 45 4 1 "hello" 2 "Display bye" 3 "Display nothing" X "Exit" 2>choice.txt
+}
+
+displaydiamenu 
+
+case "`cat choice.txt`" in 
+	1) echo "hello world";;
+	2) echo "Bye";;
+	3) echo "notinh";;
+	X) echo "exit";;
+esac

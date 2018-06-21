@@ -1,0 +1,24 @@
+#!/bin/bash 
+#demo of message box with OK button
+
+
+MSGBOX=${MSGBOX=dialog}
+TITLE="Default"
+MESSAGE="Something to say"
+XCORD=10
+YCord=20
+
+function  displaymsgbox ()
+{
+	$MSGBOX --title "$1" --msgbox "$2" "$3" "$4"
+}
+
+if [[ "$1" == "shutdown" ]]; then 
+	displaymsgbox "Warning!!" "Shutting down" "11" "21"
+	echo "Shutting down now"
+else
+	displaymsgbox "Info" "not proper" "11" "21"
+	echo "blahhhhhhh"
+fi
+
+

@@ -1,0 +1,27 @@
+#!/bin/bash 
+
+#Simple demo of info box with dialog and ncurses.
+#We need to install dialog [use aptitude for ubuntu  or yum for centos depeding on OS distribution type]
+
+INFOBOX=${INFOBOX=dialog}
+TITLE="Default"
+MESSAGE="Something to say"
+XCORD=10
+YCord=20
+
+function  displayinfobox ()
+{
+	$INFOBOX --title "$1" --infobox "$2" "$3" "$4"
+	sleep "$5"
+}
+
+if [[ "$1" == "shutdown" ]]; then 
+	displayinfobox "Warning!!" "Shutting down" "11" "21" "5"
+	echo "Shutting down now"
+else
+	displayinfobox "Info" "not proper" "11" "21" "5"
+	echo "blahhhhhhh"
+fi
+
+
+
